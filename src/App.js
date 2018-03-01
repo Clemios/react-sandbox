@@ -2,21 +2,16 @@ import React, { Component } from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
 
 import logo from './logo.svg';
-import Homus from './Homus.js'
-import Requettus from './Requettus'
-
-import './App.css';
+import Homus from './Homus';
+import Requettus from './Requettus';
 
 class App extends Component {
-
-  renderContent = () => {
-    return (
-      <Switch>
-        <Route exact path="/" component={Homus} />
-        <Route exact path="/requests" component={Requettus} />
-      </Switch>
-    );
-  }
+  renderContent = () => (
+    <Switch>
+      <Route exact path="/" component={Homus} />
+      <Route exact path="/requests" component={Requettus} />
+    </Switch>
+  )
 
   render() {
     return (
@@ -27,7 +22,7 @@ class App extends Component {
           <Link to="/requests"><button style={{ float: 'right' }}>Requests</button></Link>
           <h1 className="App-title">Welcome to React</h1>
         </header>
-    {this.renderContent()}
+        {this.renderContent()}
       </div>
     );
   }

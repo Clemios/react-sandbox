@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import Componentus from './Componentus'
 import Buttonus from './Buttonus'
 import Clockus from './Clockus'
